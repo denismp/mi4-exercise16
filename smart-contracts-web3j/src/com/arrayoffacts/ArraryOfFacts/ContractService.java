@@ -62,5 +62,19 @@ public class ContractService {
 		TransactionReceipt txInfo = contract.add(fact).send();
 		return txInfo;
 	}
+
+
+	public String getFact(BigInteger bigInteger) throws Exception {
+		// TODO Auto-generated method stub
+		String fact = contract.getFact(bigInteger).send();
+		return fact;		
+	}
+
+
+	public BigInteger getFactsCount() throws Exception {
+		// TODO Auto-generated method stub
+		BigInteger count = contract.count().send();
+		return count;
+	}
 	
 }
